@@ -18,12 +18,12 @@ class ProductController extends Controller
     {
         $dataProducts = new Product;
         $product_name = $request->query('s');
-        $cate = $request->query('category_id');
+        $cate = $request->query('cate_id');
         if ($cate) {
             $dataProducts = $dataProducts->where('category_id', $cate);
         }
         if ($product_name) {
-            $dataProducts = $dataProducts->where('title', 'LIKE', '%' . $product_name . '%');
+            $dataProducts = $dataProducts->where('product_name', 'LIKE', '%' . $product_name . '%');
         }
         $dataProduct = $dataProducts->orderBy('created_at', 'asc');
         $data = [
