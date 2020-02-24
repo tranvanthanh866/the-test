@@ -1,0 +1,30 @@
+{
+    "name": "demo/ecommerce",
+    "description": "The webstie demo on Laravel Framework.",
+    "authors": [
+        {
+            "name": "Thanh Tran",
+            "email": "tranvanthanh866@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "kalnoy/nestedset": "5.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demo\\Ecommerce\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Demo\\Ecommerce\\Providers\\EcommerceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
