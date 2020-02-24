@@ -6,7 +6,7 @@ Required
 - MariaDB 10.3.
 - composer for php >= 7.2
 
-####Install 
+###Install 
 cd your local product and open cmd run
 ```bash
 $ composer install
@@ -26,12 +26,12 @@ Create your database name and run cmd
 $ php artisan migrate
 $ php artisan key:generate
 ```
-Asset to url for check:
-#####Admin:  
+Asset to url for check: 
+####Admin:  
 domain.example/admin/category   
-domain.example/admin/product
-#####Front:  
+domain.example/admin/product    
+####Front:  
 domain.example
 
-#####SRC: 
+####SRC: 
 /platfor/ecommerce
