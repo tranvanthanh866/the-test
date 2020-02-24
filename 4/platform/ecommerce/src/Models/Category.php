@@ -34,24 +34,36 @@ class Category extends Model
         $query_ct = "
             WITH RECURSIVE tmp as ( 
                 SELECT 
-                    ct.* 
+                    ct.*
                 FROM category ct 
                 WHERE ct.category_name like '%$param_name%'
                 AND deleted_at IS NULL
+            ), children as (
+                SELECT 
+                    ct.* 
+                FROM category ct 
+                JOIN tmp ON tmp.category_id = ct.category_id
+                AND ct.deleted_at IS NULL
               UNION
                 SELECT 
                     cte.* 
-                FROM category cte, tmp 
-                WHERE tmp.category_id = cte.parent_id
+                FROM category cte, children 
+                WHERE children.category_id = cte.parent_id
+            ), parent as (
+                SELECT 
+                    ct.* 
+                FROM category ct 
+                JOIN tmp ON tmp.category_id = ct.category_id
+                AND ct.deleted_at IS NULL
               UNION
                 SELECT 
                     cte.* 
-                FROM category cte, tmp 
-                WHERE tmp.parent_id = cte.category_id
-            ), tree as (
-            
+                FROM category cte, parent 
+                WHERE parent.parent_id = cte.category_id
             )
-            SELECT * FROM tmp
+            SELECT * FROM children
+            UNION
+            SELECT * FROM parent
             
             ;
     

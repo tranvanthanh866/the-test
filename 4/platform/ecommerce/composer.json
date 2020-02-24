@@ -9,7 +9,7 @@
     ],
     "type": "project",
     "require": {
-        "kalnoy/nestedset": "5.0.*"
+        
     },
     "autoload": {
         "psr-4": {
