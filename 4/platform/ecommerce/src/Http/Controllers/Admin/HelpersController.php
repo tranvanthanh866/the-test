@@ -89,7 +89,7 @@ class HelpersController extends Controller
                            class="check-item">
                 </td>
                 <td class="title">
-                    <a href="'.url('admin/category/edit/'.$category->category_id).'">'.$prefix.$category->category_name.'</a>
+                    <a href="javascript:void(0)">'.$prefix.$category->category_name.'</a>
                 </td>
                 <td>'.$category->category_slug.'</td>
                 <td class="d-none d-md-block">'.$category->updated_at.'</td>
@@ -111,7 +111,7 @@ class HelpersController extends Controller
                            class="check-item">
                 </td>
                 <td class="title">
-                    <a href="'.url('admin/category/edit/'.$category->category_id).'">'.$prefix.$category->category_name.'</a>
+                    <a href="javascript:void(0)">'.$prefix.$category->category_name.'</a>
                 </td>
                 <td>'.$category->category_slug.'</td>
                 <td class="d-none d-md-block">'.$category->updated_at.'</td>

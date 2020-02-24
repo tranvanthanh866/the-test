@@ -70,7 +70,7 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                                                 <input type="checkbox" class="check-item" name="ids[]" value="{{$row->product_id}}">
                                             </td>
                                             <td class="title">
-                                                <a href="{{url('admin/product/edit/'.$row->product_id)}}">{{$row->product_name}}</a>
+                                                <a href="javascript:void(0)">{{$row->product_name}}</a>
                                             </td>
                                             <td>{{$row->category->category_name ?? '' }}</td>
                                             <td> {{$row->price ?? ''}} </td>
