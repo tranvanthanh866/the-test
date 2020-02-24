@@ -12,16 +12,16 @@ cd your local product and open cmd run
 $ composer install
 $ cp .env.example .env
 ```
-File .env
+Config file .env
 ```.env
 DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=
-DB_USERNAME=root
-DB_PASSWORD=
+DB_HOST=127.0.0.1 // host mariadb
+DB_PORT=3306 // your post mariadb
+DB_DATABASE=your_database
+DB_USERNAME=your_user
+DB_PASSWORD=your_password
 ```
-Create your database name and run
+Create your database name and run cmd
 ```bash
 $ php artisan migrate
 $ php artisan key:generate
@@ -32,3 +32,6 @@ domain.example/admin/category
 domain.example/admin/product
 #####Front:  
 domain.example
+
+#####SRC: 
+/platfor/ecommerce

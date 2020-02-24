@@ -5,19 +5,19 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
 @section('content')
     <div class="container-fluid" id="category">
         <div class="d-flex justify-content-between mb20">
-            <h1 class="title-bar"> {{ __('Categories')}}</h1>
+            <h1 class="title-bar"> Categories</h1>
         </div>
         @include('ecommerce::admin.parts.message')
         <div class="row">
             <div class="col-md-4 mb40">
                 <div class="panel">
-                    <div class="panel-title"> {{ __('Add Category')}}</div>
+                    <div class="panel-title"> Add Category</div>
                     <div class="panel-body">
                         <form action="" method="post">
                             @csrf
                             @include('ecommerce::admin.category.form',['parents'=>$rows])
                             <div class="">
-                                <button class="btn btn-primary" type="submit"> {{ __('Add new')}}</button>
+                                <button class="btn btn-primary" type="submit"> Add new</button>
                             </div>
                         </form>
                     </div>
@@ -33,13 +33,13 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                                   id="bulk-action">
                                 {{csrf_field()}}
                                 <select name="action" class="form-control">
-                                    <option value="">{{__(" Bulk Action ")}}</option>
-                                    <option value="delete">{{__(" Delete ")}}</option>
+                                    <option value="">Bulk Action</option>
+                                    <option value="delete">Delete</option>
                                 </select>
-                                <button data-confirm="{{__("Do you want to delete?")}}"
+                                <button data-confirm="Do you want to delete?"
                                         @click="bulkEdit"
                                         class="btn-info btn btn-icon dungdt-apply-form-btn"
-                                        type="button">{{__('Apply')}}</button>
+                                        type="button">Apply</button>
                             </form>
 
 
@@ -51,7 +51,7 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                             @csrf
                             <input type="text" name="s" value="{{ Request()->s }}" class="form-control">
                             <button class="btn-info btn btn-icon btn_search" id="search-submit"
-                                    type="submit">{{__('Search Category')}}</button>
+                                    type="submit">Search Category</button>
                         </form>
                     </div>
                 </div>
@@ -62,9 +62,9 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                                 <thead>
                                 <tr>
                                     <th width="60px"><input type="checkbox" class="check-all"></th>
-                                    <th> {{ __('Name')}}</th>
-                                    <th> {{ __('Slug')}}</th>
-                                    <th class="d-none d-md-block"> {{ __('Date')}}</th>
+                                    <th> Name</th>
+                                    <th> Slug</th>
+                                    <th class="d-none d-md-block"> Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -74,7 +74,7 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                                     @endforeach
                                 @else
                                     <tr>
-                                        <td colspan="4">{{__("No data")}}</td>
+                                        <td colspan="4">No data</td>
                                     </tr>
                                 @endif
                                 </tbody>

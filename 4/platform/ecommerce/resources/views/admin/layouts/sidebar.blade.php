@@ -1,20 +1,14 @@
 <?php
 $menus = [
-   /* [
-        'url'   => 'admin',
-        'title' => __("Dashboard"),
-        'icon'  => 'icon ion-ios-desktop',
-        "position"=>0
-    ],*/
     [
-        "position"=>2,
+        "position"=>1,
         'url'        => 'admin/category',
         'title'      => 'Category',
         'icon'       => 'ion-md-bookmarks',
 
     ],
     [
-        "position"=>3,
+        "position"=>2,
         'url'        => 'admin/product',
         'title'      => 'Product',
         'icon'       => 'ion-md-bookmarks',

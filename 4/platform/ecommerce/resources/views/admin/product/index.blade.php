@@ -18,27 +18,27 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                           class="filter-form filter-form-left d-flex justify-content-start">
                         {{csrf_field()}}
                         <select name="action" class="form-control">
-                            <option value="">{{__(" Bulk Actions ")}}</option>
-                            <option value="publish">{{__(" Publish ")}}</option>
-                            <option value="draft">{{__(" Move to Draft ")}}</option>
-                            <option value="delete">{{__(" Delete ")}}</option>
+                            <option value="">Bulk Actions</option>
+                            <option value="publish">Publish</option>
+                            <option value="draft">Move to Draft</option>
+                            <option value="delete">Delete</option>
                         </select>
-                        <button data-confirm="{{__("Do you want to delete?")}}" class="btn-info btn btn-icon dungdt-apply-form-btn" type="submit">{{__('Apply')}}</button>
+                        <button data-confirm="Do you want to delete?" class="btn-info btn btn-icon dungdt-apply-form-btn" type="submit">Apply</button>
                     </form>
                 @endif
             </div>
             <div class="col-left">
                 <form method="get" action="{{url('/admin/product')}} " class="filter-form filter-form-right d-flex justify-content-end flex-column flex-sm-row" role="search">
-                    <input type="text" name="s" value="{{ Request()->s }}" placeholder="{{__('Search by name')}}"
+                    <input type="text" name="s" value="{{ Request()->s }}" placeholder="Search by name"
                            class="form-control">
                     <select name="cate_id" class="form-control">
-                        <option value="">{{ __('--All Category --')}} </option>
+                        <option value="">--All Category -- </option>
                         @foreach($categories as $category)
                             {!! HelpersController::html_category_option($category) !!}
                         @endforeach
 
                     </select>
-                    <button class="btn-info btn btn-icon btn_search" type="submit">{{__('Search News')}}</button>
+                    <button class="btn-info btn btn-icon btn_search" type="submit">Search News</button>
                 </form>
             </div>
         </div>
@@ -55,11 +55,11 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                                 <thead>
                                 <tr>
                                     <th width="60px"><input type="checkbox" class="check-all"></th>
-                                    <th class="title"> {{ __('Product Name')}}</th>
-                                    <th class="category"> {{ __('Category')}}</th>
-                                    <th class="author"> {{ __('price')}}</th>
-                                    <th class="date"> {{ __('Date')}}</th>
-                                    <th width="100px">{{  __('Status')}}</th>
+                                    <th class="title"> Product Name</th>
+                                    <th class="category"> Category</th>
+                                    <th class="author"> price</th>
+                                    <th class="date"> Date</th>
+                                    <th width="100px">Status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -81,7 +81,7 @@ use Demo\Ecommerce\Http\Controllers\Admin\HelpersController;
                                     @endforeach
                                 @else
                                     <tr>
-                                        <td colspan="6">{{__("No data")}}</td>
+                                        <td colspan="6">No data</td>
                                     </tr>
                                 @endif
                                 </tbody>
